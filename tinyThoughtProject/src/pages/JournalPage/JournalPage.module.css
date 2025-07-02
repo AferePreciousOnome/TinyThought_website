@@ -1,0 +1,130 @@
+.page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #f3e5f5;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(126, 87, 194, 0.15);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #7e57c2;
+  margin-bottom: 1rem;
+}
+.encouragementBanner {
+  background-color: #ede7f6;
+  color: #5e35b1;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.summaryContainer {
+  margin-top: 32px;
+  padding: 16px;
+  background: #f3e5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.emojiSummary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.sentimentBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(126, 87, 194, 0.1);
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.sentimentBadge:hover {
+  background-color: #d1c4e9;
+}
+
+.emoji {
+  font-size: 1.4rem;
+}
+
+.count {
+  font-size: 1rem;
+  color: #7e57c2;
+  min-width: 20px;
+  text-align: center;
+}
+
+.labelText {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.positive {
+  color: #4caf50;
+}
+
+.neutral {
+  color: #ff9800;
+}
+
+.negative {
+  color: #f44336;
+}
+
+.unknown {
+  color: #9e9e9e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .page {
+    padding: 1rem 1rem;
+    margin: 1rem;
+    border-radius: 16px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .encouragementBanner {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .summaryContainer {
+    padding: 12px;
+  }
+
+  .emojiSummary {
+    gap: 10px;
+  }
+
+  .sentimentBadge {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .emoji {
+    font-size: 1.2rem;
+  }
+
+  .count,
+  .labelText {
+    font-size: 0.9rem;
+  }
+}

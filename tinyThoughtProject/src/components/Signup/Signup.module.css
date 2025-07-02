@@ -1,0 +1,90 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(126, 87, 194, 0.15);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-size: 1.5rem;
+  color: #7e57c2;
+  margin-bottom: 1rem;
+}
+
+.inputField {
+  width: 90%;
+  padding: 12px 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #7e57c2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(126, 87, 194, 0.3);
+}
+
+.primaryButton {
+  width: 100%;
+  background-color: #7e57c2; /* primary color */
+  color: #fff; /* white text for contrast */
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(126, 87, 194, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primaryButton:hover,
+.primaryButton:focus {
+  background-color: #9575cd; /* accent color */
+  box-shadow: 0 6px 14px rgba(149, 117, 205, 0.4);
+  outline: none;
+}
+
+.errorMessage {
+  color: #e53e3e;
+  text-align: center;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .inputField {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  .primaryButton {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .errorMessage {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+}

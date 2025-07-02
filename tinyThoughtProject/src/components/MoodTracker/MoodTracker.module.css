@@ -1,0 +1,25 @@
+.container {
+  background: #f3e5f5;
+  padding: 1rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(126, 87, 194, 0.1);
+}
+
+.header {
+  font-size: 1.5rem;
+  color: #7e57c2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
+}
