@@ -59,6 +59,12 @@ client/
 │ ├── JournalEntryForm/
 │ ├── JournalProfile/
 │ └── MoodTracker/
+| └── LandingPage/
+| └── Login/
+| └── Signup/
+| └── ForgotPassword/
+| └── ResetPassword/
+| └── Footer/
 │
 ├── pages/
 │ ├── LandingPage/
@@ -105,6 +111,8 @@ CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   email TEXT UNIQUE NOT NULL,
   password_hash TEXT NOT NULL,
+  reset_password_token TEXT,
+  reset_password_expires TIMESTAMP,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -116,6 +124,7 @@ CREATE TABLE journal_entries (
   sentiment_label TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 ```
 
 # Run Backend
@@ -127,7 +136,7 @@ npm run dev
 # Frontend Setup
 
 ```js
-cd ../client
+cd api
 npm install
 npm start
 ```
@@ -139,19 +148,20 @@ npm start
 - **Auth**
 
 ```js
-POST /auth/signup – Register and receive token
+POST /auth/signup          – Register and receive token
+POST /auth/login           – Login and receive token
+POST /auth/forgot-password – Request password reset link via email
+POST /auth/reset-password  – Submit new password using token
 
-POST /auth/login – Login and receive token
 ```
 
 - **Journal**
 
 ```js
-GET /journal – Get user entries (protected)
+GET /journal               – Get user entries (protected)
+POST /journal              – Create entry (protected)
+DELETE /journal/:id        – Delete entry (protected)
 
-POST /journal – Create entry (protected)
-
-DELETE /journal/:id – Delete entry (protected)
 ```
 
 - **All journal routes require Authorization: Bearer <token>**
@@ -168,6 +178,17 @@ DELETE /journal/:id – Delete entry (protected)
   "created_at": "2025-06-30T09:23:44Z"
 }
 ```
+
+# Password Reset Flow
+
+- Forgot Password Page
+  - User enters email → receives reset link.
+  - /auth/forgot-password triggered on backend.
+- Email Sent
+  - Reset link: http://localhost:5173/reset-password?token=...
+  - Reset Password Page
+- New password & confirm password.
+  - /auth/reset-password handles the final update.
 
 # Future Enhancements
 
