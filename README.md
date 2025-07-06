@@ -9,10 +9,6 @@ Built with React and a RESTful backend, TinyThought combines clean design, senti
 
 TinyThought encourages mental wellness by making self-reflection simple, supportive, and emotionally intelligent. It helps users recognize emotional patterns, feel affirmed through adaptive encouragement, and build a habit of mindful journaling all in a private, user-friendly space.
 
-## Screenshots
-
-![screenshot](./public/readMe.png)
-
 ## Features
 
 ### User Auth
@@ -84,12 +80,12 @@ client/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📦 1. Clone the repository
+###  1. Clone the repository
 
 ```js
-git clone https://github.com/AferePreciousOnome/tinythought.git
+git clone https://github.com/yourusername/tinythought.git
 cd tinythought
 ```
 
@@ -145,7 +141,7 @@ npm install
 npm start
 ```
 
-**The app will run at http://localhost:5173**
+**The app will run at http://localhost:3000**
 
 # API Overview
 
