@@ -85,7 +85,7 @@ client/
 ### 📦 1. Clone the repository
 
 ```js
-git clone https://github.com/yourusername/tinythought.git
+git clone https://github.com/AferePreciousOnome/tinythought.git
 cd tinythought
 ```
 
@@ -141,7 +141,7 @@ npm install
 npm start
 ```
 
-**The app will run at http://localhost:3000**
+**The app will run at http://localhost:5173**
 
 # API Overview
 
