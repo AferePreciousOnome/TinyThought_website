@@ -80,9 +80,9 @@ client/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📦 1. Clone the repository
+###  1. Clone the repository
 
 ```js
 git clone https://github.com/yourusername/tinythought.git
